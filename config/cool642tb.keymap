@@ -267,10 +267,10 @@
 
         NUM {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                                 &kp PERCENT   &kp NUMBER_1    &jis_symbole_2  &kp NUMBER_3    &kp PLUS
-&kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &kp LEFT_PARENTHESIS   &kp SLASH     &kp NUMBER_4    &kp NUMBER_5    &jis_symbole_6  &kp MINUS
-&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp NUMBER_0  &jis_symbole_7  &jis_symbole_8  &jis_symbole_9  &kp ASTRK
-&trans  &trans   &trans   &trans   &trans  &trans  &trans                 &kp DOT                                                       &kp EQUAL
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                  &kp N1          &jis_symbole_2  &kp N3          &kp N4          &kp N5
+&kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &none   &jis_symbole_6  &jis_symbole_7  &jis_symbole_8  &jis_symbole_9  &kp N0
+&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &none   &kp PLUS        &kp MINUS       &kp ASTRK       &kp SLASH       &kp PERCENT
+&trans  &trans   &trans   &trans   &trans  &trans  &trans  &trans                                                          &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
