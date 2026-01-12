@@ -9,29 +9,50 @@
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 
-#define JP_DQUOTE       AT                // "
-#define JP_AMPERSAND    CARET             // &
-#define JP_QUOTE        AMPERSAND         // '
-#define JP_EQUAL        UNDER             // =
-#define JP_CARET        EQUAL             // ^
-#define JP_YEN          0x89              // ¥
-#define JP_PLUS         COLON             // +
-#define JP_TILDE        PLUS              // ~
-#define JP_PIPE         LS(0x89)          // |
-#define JP_AT           LEFT_BRACKET      // @
-#define JP_COLON        SINGLE_QUOTE      // :
-#define JP_ASTERISK     DOUBLE_QUOTES     // *
-#define JP_BACKQUOTE    LEFT_BRACE        // `
-#define JP_UNDERSCORE   LS(0x87)          // _
-#define JP_LBRACKET     RIGHT_BRACKET     // [
-#define JP_RBRACKET     BACKSLASH         // ]
-#define JP_LPAREN       ASTERISK          // (
-#define JP_RPAREN       LEFT_PARENTHESIS  // )
-#define JP_LBRACE       RIGHT_BRACE       // {
-#define JP_RBRACE       PIPE              // }
+// #define JP_DQUOTE       AT                // "
+#define JP_DQUOTE       DOUBLE_QUOTES     // "
+// #define JP_AMPERSAND    CARET             // &
+#define JP_AMPERSAND    AMPERSAND         // &
+// #define JP_QUOTE        AMPERSAND         // '
+#define JP_QUOTE        SINGLE_QUOTE      // '
+// #define JP_EQUAL        UNDER             // =
+#define JP_EQUAL        EQUAL             // =
+// #define JP_CARET        EQUAL             // ^
+#define JP_CARET        CARET             // ^
+// #define JP_YEN          0x89              // ¥
+#define JP_YEN          INTERNATIONAL_3   // ¥
+// #define JP_PLUS         COLON             // +
+#define JP_PLUS         PLUS              // +
+// #define JP_TILDE        PLUS              // ~
+#define JP_TILDE        TILDE             // ~
+// #define JP_PIPE         LS(0x89)          // |
+#define JP_PIPE         PIPE2             // |
+// #define JP_AT           LEFT_BRACKET      // @
+#define JP_AT           AT_SIGN           // @
+// #define JP_COLON        SINGLE_QUOTE      // :
+#define JP_COLON        COLON             // :
+// #define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_ASTERISK     ASTERISK          // *
+// #define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_BACKQUOTE    GRAVE             // `
+// #define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_UNDERSCORE   UNDERSCORE        // _
+// #define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_LBRACKET     LEFT_BRACKET      // [
+// #define JP_RBRACKET     BACKSLASH         // ]
+#define JP_RBRACKET     RIGHT_BRACKET     // ]
+// #define JP_LPAREN       ASTERISK          // (
+#define JP_LPAREN       LEFT_PARENTHESIS  // (
+// #define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_RPAREN       RIGHT_PARENTHESIS  // )
+// #define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_LBRACE       LEFT_BRACE        // {
+// #define JP_RBRACE       PIPE              // }
+#define JP_RBRACE       RIGHT_BRACE       // }
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
-#define JP_HANZEN       GRAVE             // 半角/全角
+// #define JP_HANZEN       GRAVE             // 半角/全角
+#define JP_HANZEN       LANGUAGE_5        // 半角/全角
 
 &mt {
     flavor = "balanced";
@@ -63,12 +84,12 @@
         };
 
         lang2 {
-            bindings = <&kp LANGUAGE_2>;
+            bindings = <&kp JP_EISU>;
             key-positions = <27 26>;
         };
 
         lang1 {
-            bindings = <&kp LANGUAGE_1>;
+            bindings = <&kp JP_KANA>;
             key-positions = <28 29>;
         };
     };
