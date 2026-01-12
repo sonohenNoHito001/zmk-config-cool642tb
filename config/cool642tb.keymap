@@ -77,46 +77,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        ret_kp: ret_kp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&to 0 &macro_param_1to1>,
-                <&macro_press>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_param_1to1>,
-                <&macro_release>,
-                <&kp MACRO_PLACEHOLDER>;
-
-            label = "RET_KP";
-        };
-
-        bt0: bt0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&tog_off 1 &tog_off 0>,
-                <&macro_wait_time 200>,
-                <&bt BT_SEL 0>,
-                <&macro_wait_time 500>;
-
-            label = "BT0";
-        };
-
-        bt1: bt1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&tog_off 1 &tog_off 0>,
-                <&macro_wait_time 200>,
-                <&bt BT_SEL 1>,
-                <&macro_wait_time 500>,
-                <&tog_on 1>;
-
-            label = "BT1";
-        };
     };
 
     behaviors {
@@ -323,13 +283,13 @@
 
         CONNECT {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &bt0          &bt1          &bt BT_SEL 2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR_ALL  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR      &trans        &trans        &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans                                            &trans
+&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
+&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
     };
 };
