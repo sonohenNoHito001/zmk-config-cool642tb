@@ -8,50 +8,90 @@
 #define SCROLL7
 
 // OS設定を日本語キーボードのまま使用するための変換定義
-
 // #define JP_DQUOTE       AT                // "
+
 #define JP_DQUOTE       DOUBLE_QUOTES     // "
+
 // #define JP_AMPERSAND    CARET             // &
+
 #define JP_AMPERSAND    AMPERSAND         // &
+
 // #define JP_QUOTE        AMPERSAND         // '
+
 #define JP_QUOTE        SINGLE_QUOTE      // '
+
 // #define JP_EQUAL        UNDER             // =
+
 #define JP_EQUAL        EQUAL             // =
+
 // #define JP_CARET        EQUAL             // ^
+
 #define JP_CARET        CARET             // ^
+
 // #define JP_YEN          0x89              // ¥
+
 #define JP_YEN          INTERNATIONAL_3   // ¥
+
 // #define JP_PLUS         COLON             // +
+
 #define JP_PLUS         PLUS              // +
+
 // #define JP_TILDE        PLUS              // ~
+
 #define JP_TILDE        TILDE             // ~
+
 // #define JP_PIPE         LS(0x89)          // |
+
 #define JP_PIPE         PIPE2             // |
+
 // #define JP_AT           LEFT_BRACKET      // @
+
 #define JP_AT           AT_SIGN           // @
+
 // #define JP_COLON        SINGLE_QUOTE      // :
+
 #define JP_COLON        COLON             // :
+
 // #define JP_ASTERISK     DOUBLE_QUOTES     // *
+
 #define JP_ASTERISK     ASTERISK          // *
+
 // #define JP_BACKQUOTE    LEFT_BRACE        // `
+
 #define JP_BACKQUOTE    GRAVE             // `
+
 // #define JP_UNDERSCORE   LS(0x87)          // _
+
 #define JP_UNDERSCORE   UNDERSCORE        // _
+
 // #define JP_LBRACKET     RIGHT_BRACKET     // [
+
 #define JP_LBRACKET     LEFT_BRACKET      // [
+
 // #define JP_RBRACKET     BACKSLASH         // ]
+
 #define JP_RBRACKET     RIGHT_BRACKET     // ]
+
 // #define JP_LPAREN       ASTERISK          // (
+
 #define JP_LPAREN       LEFT_PARENTHESIS  // (
+
 // #define JP_RPAREN       LEFT_PARENTHESIS  // )
+
 #define JP_RPAREN       RIGHT_PARENTHESIS  // )
+
 // #define JP_LBRACE       RIGHT_BRACE       // {
+
 #define JP_LBRACE       LEFT_BRACE        // {
+
 // #define JP_RBRACE       PIPE              // }
+
 #define JP_RBRACE       RIGHT_BRACE       // }
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
+
 // #define JP_HANZEN       GRAVE             // 半角/全角
+
 #define JP_HANZEN       LANGUAGE_5        // 半角/全角
 
 &mt {
@@ -260,7 +300,7 @@
 &lt 6 Q             &kp W           &kp E             &kp R         &kp T                                                               &kp Y        &kp U  &kp I      &kp O         &kp P
 &mt LEFT_CONTROL A  &kp S           &kp D             &kp F         &kp G        &none                       &kp JP_HANZEN              &kp H        &kp J  &kp K      &lt 4 L       &kp ENTER
 &mt LEFT_SHIFT Z    &kp X           &kp C             &kp V         &kp B        &jis_symbole_right_bracket  &jis_symbole_left_bracket  &kp N        &kp M  &kp COMMA  &lt 5 PERIOD  &kp SLASH
-&kp LEFT_COMMAND    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 4 SPACE  &lt 5 DELETE                &kp BACKSPACE              &lt 1 SPACE                                  &jis_symbole_unsco_backslash
+&kp LEFT_COMMAND    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 3 SPACE  &lt 2 DELETE                &kp BACKSPACE              &lt 1 SPACE                                  &jis_symbole_unsco_backslash
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
@@ -331,17 +371,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        num_condition {
-            if-layers = <1 4>;
-            then-layer = <3>;
-        };
-
-        symbole_condition {
-            if-layers = <1 5>;
-            then-layer = <2>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
