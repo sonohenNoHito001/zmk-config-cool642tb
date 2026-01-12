@@ -129,6 +129,24 @@
             mods = <(MOD_LSFT)>;
         };
 
+        jis_symbole_8: jis_symbole_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JIS_SYMBOLE_8";
+            bindings = <&kp N8>, <&kp JP_LPAREN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jis_symbole_9: jis_symbole_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "jis_symbole_9";
+            bindings = <&kp N9>, <&kp JP_RPAREN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
         // jis symbole
 
         jis_symbole_minus_equal: jis_symbole_minus_equal {
@@ -251,7 +269,7 @@
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &trans                                 &kp PERCENT   &kp NUMBER_1    &jis_symbole_2  &kp NUMBER_3    &kp PLUS
 &kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &kp LEFT_PARENTHESIS   &kp SLASH     &kp NUMBER_4    &kp NUMBER_5    &jis_symbole_6  &kp MINUS
-&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp NUMBER_0  &jis_symbole_7  &kp NUMBER_8    &kp NUMBER_9    &kp ASTRK
+&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp NUMBER_0  &jis_symbole_7  &jis_symbole_8  &jis_symbole_9  &kp ASTRK
 &trans  &trans   &trans   &trans   &trans  &trans  &trans                 &kp DOT                                                       &kp EQUAL
             >;
 
