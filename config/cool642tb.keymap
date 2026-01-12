@@ -259,24 +259,24 @@
 
         MOUSE {
             bindings = <
-&kp Q       &kp W    &kp E             &kp R         &kp T                            &kp Y          &kp U  &kp I     &kp O     &kp P
-&kp A       &kp S    &kp D             &kp F         &kp G     &kp N1    &kp N2       &kp H          &kp J  &kp K     &kp L     &kp ENTER
-&kp Z       &kp X    &kp C             &kp V         &kp B     &kp N3    &kp N4       &kp N          &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp ESCAPE  &kp TAB  &kp LEFT_CONTROL  &kp LEFT_GUI  &mkp MB1  &mkp MB2  &lt 2 SPACE  &kp BACKSPACE                             &kp LEFT_SHIFT
+&trans            &trans            &trans                &trans             &trans                                &trans    &trans         &trans     &trans  &trans
+&kp LS(LA(LEFT))  &kp LS(LA(DOWN))  &kp LS(LA(UP_ARROW))  &kp LA(LS(RIGHT))  &trans  &trans  &kp LG(LS(NUMBER_4))  &trans    &mkp LCLK      &mkp RCLK  &trans  &trans
+&trans            &trans            &trans                &trans             &trans  &trans  &trans                &trans    &kp LS(LA(M))  &trans     &trans  &trans
+&trans            &trans            &trans                &trans             &trans  &trans  &kp BACKSPACE         &mkp MB4                                    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp DELETE BACKSPACE>;
         };
 
         SCROLL {
             bindings = <
-&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
+&trans  &trans  &trans  &trans  &trans                         &trans             &trans             &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans             &kp RIGHT_COMMAND  &kp RIGHT_ALT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans             &trans             &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp RIGHT_ALT  &kp RIGHT_COMMAND                                            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         CONNECT {
