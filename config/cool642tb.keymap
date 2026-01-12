@@ -61,6 +61,16 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <9 8>;
         };
+
+        lang2 {
+            bindings = <&kp LANGUAGE_2>;
+            key-positions = <27 26>;
+        };
+
+        lang1 {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <28 29>;
+        };
     };
 
     macros {
@@ -219,10 +229,10 @@
 
         FUNCTION {
             bindings = <
-&kp ESC  &trans  &kp ENTER   &trans  &trans                         &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp AMPERSAND  &kp PIPE         &kp EQUAL
-&trans   &trans  &kp DELETE  &trans  &trans         &trans  &kp AT  &kp LEFT          &kp DOWN_ARROW     &kp UP_ARROW   &kp RIGHT_ARROW  &kp SEMICOLON
-&trans   &trans  &trans      &trans  &kp BACKSPACE  &trans  &trans  &kp HOME          &kp PAGE_DOWN      &kp PAGE_UP    &kp END          &kp MINUS
-&trans   &trans  &trans      &trans  &trans         &trans  &trans  &trans                                                               &trans
+&kp ESC  &trans  &kp ENTER   &trans  &trans                         &kp LC(HOME)  &trans          &trans        &kp LC(END)      &jis_symbole_minus_equal
+&trans   &trans  &kp DELETE  &trans  &trans         &trans  &trans  &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans   &trans  &trans      &trans  &kp BACKSPACE  &trans  &trans  &kp HOME      &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+&trans   &trans  &trans      &trans  &trans         &trans  &trans  &trans                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
@@ -230,19 +240,19 @@
 
         SYMBOLE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &jis_symbole_minus_equal     &jis_symbole_caret_tilde   &jis_symbole_backslash_pipe
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &jis_symbole_backquote_AT  &jis_symbole_right_bracket
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &jis_symbole_semicolon_plus  &jis_symbole_colon_aster   &jis_symbole_left_bracket
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                  &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                                 &kp PERCENT   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS
-&kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &kp LEFT_PARENTHESIS   &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTRK
-&trans  &trans   &trans   &trans   &trans  &trans  &trans                 &kp DOT                                                 &kp EQUAL
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                                 &kp PERCENT   &kp NUMBER_1    &jis_symbole_2  &kp NUMBER_3    &kp PLUS
+&kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &kp LEFT_PARENTHESIS   &kp SLASH     &kp NUMBER_4    &kp NUMBER_5    &jis_symbole_6  &kp MINUS
+&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp NUMBER_0  &jis_symbole_7  &kp NUMBER_8    &kp NUMBER_9    &kp ASTRK
+&trans  &trans   &trans   &trans   &trans  &trans  &trans                 &kp DOT                                                       &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
