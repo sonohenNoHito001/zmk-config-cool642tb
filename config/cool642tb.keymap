@@ -215,9 +215,9 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W           &kp E             &kp R         &kp T                                             &kp Y        &kp U  &kp I      &kp O         &lt 7 P
+&kp Q               &kp W           &kp E             &kp R         &kp T                                             &kp Y        &kp U  &kp I      &kp O         &lt 6 P
 &mt LEFT_CONTROL A  &kp S           &kp D             &kp F         &kp G        &none             &kp LC(SPACE)      &kp H        &kp J  &kp K      &lt 5 L       &kp ENTER
-&mt LEFT_SHIFT Z    &kp X           &kp C             &kp V         &kp B        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N        &kp M  &kp COMMA  &lt 6 PERIOD  &kp SLASH
+&mt LEFT_SHIFT Z    &kp X           &kp C             &kp V         &kp B        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N        &kp M  &kp COMMA  &lt 4 PERIOD  &kp SLASH
 &kp LEFT_COMMAND    &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 2 SPACE  &lt 4 DELETE      &lt 2 BACKSPACE    &lt 3 SPACE                                  &kp UNDERSCORE
             >;
 
@@ -283,13 +283,11 @@
 
         CONNECT {
             bindings = <
-&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
-&kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
+&trans  &trans  &trans  &trans  &trans                  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
     };
 };
