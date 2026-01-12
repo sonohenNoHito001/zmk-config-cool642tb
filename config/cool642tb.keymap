@@ -96,7 +96,7 @@
 
             tap-ms = <20>;
         };
-        
+
         // jis number
 
         jis_symbole_2: jis_symbole_2 {
@@ -277,10 +277,11 @@
             >;
 
             // マウススクロール
+
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_6 {
+        CONNECT {
             bindings = <
 &kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
 &kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
