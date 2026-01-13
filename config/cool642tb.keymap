@@ -31,7 +31,7 @@
 #define JP_RBRACE       RIGHT_BRACE       // }
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
-#define JP_HANZEN       LANGUAGE_5        // 半角/全角
+#define JP_HANZEN       LC(SPACE)         // 半角/全角
 
 &mt {
     flavor = "balanced";
@@ -167,10 +167,10 @@
             mods = <(MOD_LSFT)>;
         };
 
-        jis_symbole_backslash_pipe: jis_symbole_backslash_pipe {
+        jis_symbole_yen_pipe: jis_symbole_yen_pipe {
             compatible = "zmk,behavior-mod-morph";
-            label = "JIS_SYMBOLE_BACKSLASH_PIPE";
-            bindings = <&kp BACKSLASH>, <&kp JP_PIPE>;
+            label = "JIS_SYMBOLE_YEN_PIPE";
+            bindings = <&kp JP_YEN>, <&kp JP_PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -258,10 +258,10 @@
 
         SYMBOLE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &jis_symbole_minus_equal     &jis_symbole_caret_tilde   &jis_symbole_backslash_pipe
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &jis_symbole_backquote_AT  &jis_symbole_right_bracket
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &jis_symbole_semicolon_plus  &jis_symbole_colon_aster   &jis_symbole_left_bracket
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                  &trans
+&trans  &trans  &trans  &trans  &trans                  &jis_symbole_minus_equal  &jis_symbole_caret_tilde   &jis_symbole_yen_pipe        &jis_symbole_backquote_AT  &jis_symbole_right_bracket
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans                     &jis_symbole_semicolon_plus  &jis_symbole_colon_aster   &jis_symbole_left_bracket
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans                     &trans                       &trans                     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                                                       &trans
             >;
         };
 
