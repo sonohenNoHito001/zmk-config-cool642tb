@@ -14,10 +14,10 @@
 #define JP_QUOTE        SINGLE_QUOTE      // '
 #define JP_EQUAL        EQUAL             // =
 #define JP_CARET        CARET             // ^
-#define JP_YEN          INTERNATIONAL_3   // ¥
+#define JP_YEN          INT_YEN           // ¥
 #define JP_PLUS         PLUS              // +
 #define JP_TILDE        TILDE             // ~
-#define JP_PIPE         PIPE2             // |
+#define JP_PIPE         PIPE              // |
 #define JP_AT           AT_SIGN           // @
 #define JP_COLON        COLON             // :
 #define JP_ASTERISK     ASTERISK          // *
@@ -170,7 +170,7 @@
         jis_symbole_yen_pipe: jis_symbole_yen_pipe {
             compatible = "zmk,behavior-mod-morph";
             label = "JIS_SYMBOLE_YEN_PIPE";
-            bindings = <&kp INT_YEN>, <&kp PIPE>;
+            bindings = <&kp JP_YEN>, <&kp JP_PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
