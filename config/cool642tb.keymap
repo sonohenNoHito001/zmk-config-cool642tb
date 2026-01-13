@@ -170,7 +170,7 @@
         jis_symbole_yen_pipe: jis_symbole_yen_pipe {
             compatible = "zmk,behavior-mod-morph";
             label = "JIS_SYMBOLE_YEN_PIPE";
-            bindings = <&kp JP_YEN>, <&kp JP_PIPE>;
+            bindings = <&kp INT_YEN>, <&kp PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
