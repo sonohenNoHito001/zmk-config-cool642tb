@@ -14,7 +14,7 @@
 #define JP_QUOTE        SINGLE_QUOTE      // '
 #define JP_EQUAL        EQUAL             // =
 #define JP_CARET        CARET             // ^
-#define JP_YEN          0x89              // ¥
+#define JP_YEN          INT_YEN           // ¥ (Keyboard International 3)
 #define JP_PLUS         PLUS              // +
 #define JP_TILDE        TILDE             // ~
 #define JP_PIPE         PIPE              // |
